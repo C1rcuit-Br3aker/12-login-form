@@ -23,11 +23,15 @@ export default class LoginForm {
     const validationMessage = this.form.querySelector(`.login-form__validation-message`);
     const emailInput = this.form.querySelector(`.login-form__email`).value;
     const passwordInput = this.form.querySelector(`.login-form__password`).value;
+    const submitButton = document.createElement(`button`);
+    submitButton.addEventListener(`click`, () => {
+      if (this.validate(emailInput, passwordInput)) {
+        validationMessage.innerText = ``;
+      } else {
+        validationMessage.innerText = `The credentials are invalid`;
+      }
+    });
 
-    if (this.validate(emailInput, passwordInput)) {
-      validationMessage.innerText = ``;
-    } else {
-      validationMessage.innerText = `The credentials are invalid`;
-    }
+
   }
   }
