@@ -4,3 +4,22 @@
 // $fa-font-path: '//netdna.bootstrapcdn.com/font-awesome/4.3.0/fonts';
 // @import 'font-awesome';
 @import 'box-sizing';
+@import 'variables';
+
+
+.main {
+  display: flex;
+  flex-direction: column;
+}
+
+.top {
+  height: 50vh;
+  border-bottom: 2px solid $brand-grey;
+  background-image: url('/bg-login-top.png');
+}
+
+.bottom {
+  height: 50vh;
+  border-top: 1px solid $brand-grey;
+  background: transparent;
+}
