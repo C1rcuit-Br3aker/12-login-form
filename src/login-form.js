@@ -1,22 +1,20 @@
 
-export default class Login {
+export default class LoginForm {
 
-  constructor(email, password ) {
+  constructor(form, email) {
     this.validCreds = [
-      { email: `aaron@theironyard.com`, password: `password123` },
-      { email: `admin@google.com`, password: `pandas` },
-      { email: `email@email.com`, password: `honeycrisp` },
-    ]};
-
-
-  validate(userName, passWord) {
-    this.userName = userName;
-    this.passWord = passWord;
-
-    if (userName === ``) {
-      return false;
-    }
-    return true;
+      { eMail: `aaron@theironyard.com`, passWord: `password123` },
+      { eMail: `admin@google.com`, passWord: `pandas` },
+      { eMail: email, passWord: `honeycrisp` },
+    ];
   }
 
+  validate(username, password) {
+    return this.validCreds.reduce((good, currentUser) => {
+      if (currentUser.eMail === username && currentUser.passWord === password) {
+        return true;
+      }
+      return good;
+    }, false);
+  }
 }
