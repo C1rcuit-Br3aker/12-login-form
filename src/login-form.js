@@ -8,6 +8,10 @@ export default class LoginForm {
       { eMail: `admin@google.com`, passWord: `pandas` },
       { eMail: email, passWord: `honeycrisp` },
     ];
+    this.form.addEventListener(`click`, (ev) => {
+      ev.preventDefault();
+      this.validateInputs();
+    });
   }
 
   validate(username, password) {
@@ -29,11 +33,5 @@ export default class LoginForm {
       validationMessage.innerText = `The credentials are invalid`;
     }
   }
-  submitButton() {
-    this.form = document.createElement(`button`);
-    this.form.addEventListener(`click`, () => {
-      this.validateInputs();
-      debugger;
-    });
 
 }

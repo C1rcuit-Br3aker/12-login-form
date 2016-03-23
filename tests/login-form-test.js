@@ -98,7 +98,7 @@ test(`the LoginForm should validate when submitted`, (assert) => {
   const button = formEl.querySelector(`button`);
 
   // Attempt validating an empty form
-  // button.click();
+  button.click();
 
   asyncAssert(() => {
     assert.equal(validationMessage.innerText.trim(), `The credentials are invalid`,
