@@ -1,0 +1,18 @@
+.main {
+  display: flex;
+  flex-direction: column;
+}
+
+.top {
+  display: flex;
+  align-items: flex-end;
+  width: 100%;
+  height: 16rem;
+  margin: auto;
+  border-bottom: 3px solid $brand-grey;
+  background-image: url('/bg-login-top.png');
+}
+
+.bottom {
+  margin: auto;
+}

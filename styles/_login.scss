@@ -1,0 +1,38 @@
+.login-conatiner {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-form {
+  text-align: right;
+}
+
+.email {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.password {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.user-info {
+  margin-right: 1rem;
+  color: $brand-white;
+}
+
+.save-button {
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  background: $brand-green;
+  color: $brand-white;
+  font-size: 0.8rem;
+}
+
+.login-form__validation-message {
+  margin-bottom: 0.5rem;
+  color: $brand-red;
+}
