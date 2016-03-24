@@ -26,6 +26,7 @@
 
 .save-button {
   padding: 0.5rem 1rem;
+  border: 0;
   border-radius: 4px;
   background: $brand-green;
   color: $brand-white;
@@ -34,5 +35,9 @@
 
 .login-form__validation-message {
   margin-bottom: 0.5rem;
-  color: $brand-red;
+  border-radius: 0.3rem;
+  background: $brand-red;
+  color: $brand-white;
+  line-height: 2rem;
+  text-align: center;
 }
