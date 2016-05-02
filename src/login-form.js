@@ -8,7 +8,7 @@ export default class LoginForm {
       { eMail: `admin@google.com`, passWord: `pandas` },
       { eMail: email, passWord: `honeycrisp` },
     ];
-    this.form.addEventListener(`click`, (ev) => {
+    this.form.addEventListener(`submit`, (ev) => {
       ev.preventDefault();
       this.validateInputs();
     });
